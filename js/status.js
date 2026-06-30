@@ -1,4 +1,4 @@
-const WEBAPP_URL = "https://script.google.com/macros/s/AKfycbxhsbkkfUKRYlbd_00HIegKbEhPUTy14Pl_Zv10hFXEHd0HV_sMMLdd4GkXt0EbKXqWGQ/exec";
+const WEBAPP_URL = "https://script.google.com/macros/library/d/1xTEpuui5he7elMlSdXtDCbpjDIdU5Ow7aEc2rmSJHT1cejj7FUxUczZW/5";
 
 const maxTeilnehmer = 120;
 

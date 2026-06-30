@@ -1,0 +1,582 @@
+/* ================================
+   2. Peheimer Schock Turnier
+   SV Peheim e.V.
+================================ */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+
+    font-family:Arial, Helvetica, sans-serif;
+
+    background:#0d5d66;
+
+    color:white;
+
+    line-height:1.6;
+
+}
+
+/* ------------------------
+Navigation
+------------------------ */
+
+nav{
+
+    position:fixed;
+
+    width:100%;
+
+    top:0;
+
+    left:0;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:15px 8%;
+
+    background:rgba(8,43,49,.95);
+
+    backdrop-filter:blur(10px);
+
+    z-index:999;
+
+}
+
+.logo img{
+
+    width:75px;
+
+}
+
+nav ul{
+
+    display:flex;
+
+    list-style:none;
+
+    gap:35px;
+
+}
+
+nav a{
+
+    text-decoration:none;
+
+    color:white;
+
+    font-weight:bold;
+
+    transition:.3s;
+
+}
+
+nav a:hover{
+
+    color:#ff8d28;
+
+}
+
+/* ------------------------
+Hero
+------------------------ */
+
+header{
+
+    min-height:100vh;
+
+    background:
+        linear-gradient(rgba(10,45,50,.75),rgba(10,45,50,.75)),
+        url("../images/flyer.jpg");
+
+    background-size:cover;
+
+    background-position:center;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    text-align:center;
+
+    padding:40px;
+
+}
+
+.hero{
+
+    max-width:850px;
+
+}
+
+.hero h1{
+
+    font-size:70px;
+
+    font-weight:900;
+
+    text-transform:uppercase;
+
+    margin-bottom:20px;
+
+    text-shadow:0 8px 25px rgba(0,0,0,.45);
+
+}
+
+.hero p{
+
+    font-size:26px;
+
+    margin-bottom:10px;
+
+}
+
+/* ------------------------
+Button
+------------------------ */
+
+.button{
+
+    display:inline-block;
+
+    margin-top:35px;
+
+    background:#f47a20;
+
+    color:white;
+
+    padding:18px 45px;
+
+    border-radius:40px;
+
+    text-decoration:none;
+
+    font-size:22px;
+
+    font-weight:bold;
+
+    transition:.35s;
+
+    box-shadow:0 12px 30px rgba(0,0,0,.35);
+
+}
+
+.button:hover{
+
+    background:#ff962f;
+
+    transform:translateY(-5px);
+
+}
+
+/* ------------------------
+Countdown
+------------------------ */
+
+#countdown{
+
+    padding:80px 20px;
+
+    text-align:center;
+
+}
+
+#countdown h2{
+
+    font-size:40px;
+
+    margin-bottom:30px;
+
+}
+
+#timer{
+
+    display:inline-block;
+
+    background:white;
+
+    color:#0d5d66;
+
+    padding:25px 40px;
+
+    border-radius:18px;
+
+    font-size:40px;
+
+    font-weight:bold;
+
+    box-shadow:0 15px 40px rgba(0,0,0,.25);
+
+}
+
+/* ------------------------
+Infos
+------------------------ */
+
+#infos{
+
+    padding:80px 8%;
+
+}
+
+#infos h2{
+
+    text-align:center;
+
+    margin-bottom:45px;
+
+    font-size:42px;
+
+}
+
+.cards{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+
+    gap:30px;
+
+}
+
+.card{
+
+    background:rgba(255,255,255,.12);
+
+    border:1px solid rgba(255,255,255,.15);
+
+    backdrop-filter:blur(12px);
+
+    border-radius:18px;
+
+    padding:35px;
+
+    text-align:center;
+
+    transition:.35s;
+
+}
+
+.card:hover{
+
+    transform:translateY(-10px);
+
+    background:rgba(255,255,255,.18);
+
+}
+
+.card h3{
+
+    font-size:28px;
+
+    color:#ff9d3d;
+
+    margin-bottom:15px;
+
+}
+
+.card p{
+
+    font-size:22px;
+
+}
+
+/* ------------------------
+Footer
+------------------------ */
+
+footer{
+
+    background:#06353b;
+
+    text-align:center;
+
+    padding:60px 20px;
+
+}
+
+footer h2{
+
+    margin-bottom:20px;
+
+    font-size:36px;
+
+}
+
+footer p{
+
+    margin:8px 0;
+
+    font-size:18px;
+
+}
+
+/* ------------------------
+Responsive
+------------------------ */
+
+@media(max-width:900px){
+
+.hero h1{
+
+font-size:48px;
+
+}
+
+.hero p{
+
+font-size:22px;
+
+}
+
+nav{
+
+padding:15px;
+
+}
+
+nav ul{
+
+gap:18px;
+
+font-size:15px;
+
+}
+
+.logo img{
+
+width:55px;
+
+}
+
+.button{
+
+font-size:18px;
+
+padding:15px 30px;
+
+}
+
+#timer{
+
+font-size:28px;
+
+padding:20px;
+
+}
+
+}
+
+@media(max-width:600px){
+
+nav{
+
+flex-direction:column;
+
+gap:15px;
+
+}
+
+.hero h1{
+
+font-size:38px;
+
+}
+
+.hero p{
+
+font-size:18px;
+
+}
+
+.cards{
+
+grid-template-columns:1fr;
+
+}
+
+}
+/* ==========================
+Countdown
+========================== */
+
+.countdown-grid{
+
+display:flex;
+
+justify-content:center;
+
+gap:20px;
+
+flex-wrap:wrap;
+
+}
+
+.count-box{
+
+background:#f47a20;
+
+padding:20px;
+
+border-radius:15px;
+
+min-width:110px;
+
+box-shadow:0 8px 20px rgba(0,0,0,.3);
+
+}
+
+.count-box span{
+
+display:block;
+
+font-size:42px;
+
+font-weight:bold;
+
+}
+
+.count-box small{
+
+font-size:16px;
+
+text-transform:uppercase;
+
+letter-spacing:1px;
+
+}
+/* ==========================
+Formular
+========================== */
+
+.form-section{
+
+max-width:850px;
+
+margin:140px auto 80px;
+
+padding:40px;
+
+background:rgba(255,255,255,.10);
+
+backdrop-filter:blur(12px);
+
+border-radius:20px;
+
+box-shadow:0 10px 30px rgba(0,0,0,.25);
+
+}
+
+.form-section h1{
+
+text-align:center;
+
+margin-bottom:15px;
+
+font-size:42px;
+
+}
+
+.form-section p{
+
+text-align:center;
+
+margin-bottom:35px;
+
+}
+
+form{
+
+display:flex;
+
+flex-direction:column;
+
+gap:18px;
+
+}
+
+input{
+
+padding:16px;
+
+border:none;
+
+border-radius:10px;
+
+font-size:18px;
+
+}
+
+input:focus{
+
+outline:3px solid #f47a20;
+
+}
+
+.checkbox{
+
+display:flex;
+
+align-items:center;
+
+gap:10px;
+
+font-size:16px;
+
+}
+
+button{
+
+padding:18px;
+
+background:#f47a20;
+
+color:white;
+
+border:none;
+
+border-radius:50px;
+
+font-size:22px;
+
+font-weight:bold;
+
+cursor:pointer;
+
+transition:.3s;
+
+}
+
+button:hover{
+
+background:#ff9737;
+
+transform:translateY(-3px);
+
+}
+
+#meldung{
+
+margin-top:25px;
+
+font-size:20px;
+
+text-align:center;
+
+font-weight:bold;
+
+}

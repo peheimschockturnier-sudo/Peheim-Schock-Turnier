@@ -1,6 +1,6 @@
 const WEBAPP_URL = "https://script.google.com/macros/library/d/1xTEpuui5he7elMlSdXtDCbpjDIdU5Ow7aEc2rmSJHT1cejj7FUxUczZW/5";
 
-const maxTeilnehmer = 120;
+const maxGruppen(4Spieler) = 30;
 
 fetch(WEBAPP_URL)
 .then(response => response.json())
@@ -10,7 +10,7 @@ fetch(WEBAPP_URL)
 
     const frei = maxTeilnehmer - angemeldet;
 
-    const prozent = (angemeldet / maxTeilnehmer) * 100;
+    const prozent = (angemeldet / maxGruppen) * 25;
 
     document.getElementById("progressBar").style.width = prozent + "%";
 

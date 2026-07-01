@@ -640,3 +640,20 @@ font-weight:bold;
     font-size:30px;
 
 }
+#statusText{
+
+    opacity:0;
+
+    transform:translateY(20px);
+
+    transition:1s;
+
+}
+
+#statusText.show{
+
+    opacity:1;
+
+    transform:translateY(0);
+
+}

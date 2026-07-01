@@ -657,3 +657,89 @@ font-weight:bold;
     transform:translateY(0);
 
 }
+/* ==============================
+   Anmeldestatus Kreis
+============================== */
+
+.status-card{
+    max-width:600px;
+    margin:40px auto;
+    background:#ffffff15;
+    backdrop-filter:blur(10px);
+    border-radius:20px;
+    padding:30px;
+    text-align:center;
+    box-shadow:0 10px 30px rgba(0,0,0,.2);
+}
+
+.circle{
+    position:relative;
+    width:180px;
+    height:180px;
+    margin:30px auto;
+}
+
+.circle svg{
+    width:180px;
+    height:180px;
+    transform:rotate(-90deg);
+}
+
+.circle circle{
+    fill:none;
+    stroke-width:12;
+}
+
+.circle circle:first-child{
+    stroke:#d9d9d9;
+}
+
+#progressCircle{
+    stroke:#ff7b00;
+    stroke-linecap:round;
+    stroke-dasharray:471;
+    stroke-dashoffset:471;
+    transition:1s;
+}
+
+.circle-text{
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    text-align:center;
+}
+
+.circle-text span{
+    display:block;
+    font-size:52px;
+    font-weight:bold;
+    color:white;
+}
+
+.circle-text small{
+    color:white;
+    font-size:18px;
+}
+
+.progress{
+    width:100%;
+    height:18px;
+    background:#ddd;
+    border-radius:30px;
+    overflow:hidden;
+    margin-top:25px;
+}
+
+#progressBar{
+    width:0%;
+    height:100%;
+    background:linear-gradient(90deg,#ff7b00,#ffb347);
+    transition:1s;
+}
+
+#statusText{
+    margin-top:20px;
+    font-size:26px;
+    color:white;
+}
